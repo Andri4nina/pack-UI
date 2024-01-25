@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Combobox</title>
+</head>
+
+<body class="min-h-screen">
+    <div class="flex justify-start items-center">
+        <a href="Index.html"><i class="bx bx-chevron-left text-3xl"></i> </a>
+    
+    </div>
+    <div class="min-w-60 max-w-xl mb-10 mx-auto">
+        <h2 class="font-semibold text-3xl">Combobox</h2>
+        <br>
+        <p>Combobox utilisables</p>
+    </div>
+
+    <div class="min-w-60 max-w-xl mx-auto">
+        <div class="relative w-72 h-12 dropdown before:content-normal before:absolute before:w-2 
+        before:h-2 before:border before:border-slate-500 before:right-5 before:top-4 before:z-50
+        before:border-t-white before:border-r-white before:rotate-45  before:transition before:pointer-events-none">
+            <input type="text" class="absolute top-0 left-0 w-full h-full cursor-pointer 
+            shadow-md border-none outline-none px-3 py-5 bg-white rounded-lg text-box" placeholder="Menu " readonly>
+            <div class="absolute top-20 w-full bg-white overflow-hidden shadow-xl rounded-md hidden option">
+                <div onclick="show('1')" class="px-3 py-5 cursor-pointer hover:bg-slate-500 hover:text-white">1</div>
+                <div onclick="show('2')" class="px-3 py-5 cursor-pointer hover:bg-slate-500 hover:text-white">2</div>
+                <div onclick="show('3')" class="px-3 py-5 cursor-pointer hover:bg-slate-500 hover:text-white">3</div>
+                <div onclick="show('4')" class="px-3 py-5 cursor-pointer hover:bg-slate-500 hover:text-white">4</div>
+                <div onclick="show('5')" class="px-3 py-5 cursor-pointer hover:bg-slate-500 hover:text-white">5</div>
+                <div onclick="show('6')" class="px-3 py-5 cursor-pointer hover:bg-slate-500 hover:text-white">6</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function show(anythings){
+            document.querySelector('.text-box').value =anythings;
+        }
+
+        let dropdown = document.querySelector('.dropdown');
+        let option = document.querySelector('.option')
+            dropdown.onclick = function(){
+                dropdown.classList.toggle('before:top-4');
+                dropdown.classList.toggle('before:top-4');
+                dropdown.classList.toggle('before:rotate-45');
+                dropdown.classList.toggle('before:-rotate-45');
+                option.classList.toggle('hidden');
+                
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*npx tailwindcss -i ./css/index.css -o ./css/tailwind.css --watch  */
+
+@layer components{
+    .accordion-header{
+        @apply py-4 px-6 cursor-pointer
+    }
+    .accordion-header.active i{
+        @apply transition ease-in-out duration-300;
+        transform: rotateX(180deg);
+        -webkit-transform: rotateX(180deg);
+        -moz-transform: rotateX(180deg);
+        -ms-transform: rotateX(180deg);
+        -o-transform: rotateX(180deg);
+    }
+    .accordion-body{
+        @apply max-h-0 overflow-hidden transition-all duration-200 ease-out
+    }
+}

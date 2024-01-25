@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Accodrion</title>
+</head>
+<body class="min-h-screen">
+    <div class="flex justify-start items-center">
+        <a href="Index.html"><i class="bx bx-chevron-left text-3xl"></i> </a>
+       
+    </div>
+    <div class="min-w-60 max-w-xl mb-10 mx-auto">
+        <h2 class="font-semibold text-3xl">Accordion</h2>
+        <br>
+        <p>Accordion soft</p>
+    </div>
+   
+
+    <div class=" max-w-2xl mx-auto ">
+        <div class="border-b-2">
+            <div class="accordion-header flex items-center justify-between">
+                <span class="font-semibold text-lg">Qui nous sommes?</span>
+                <i class="bx bx-chevron-down"></i>
+            </div>
+
+            <div class="accordion-body">
+                <div class="p-4 ">
+                    <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Quaerat inventore molestiae magni 
+                        voluptatem veniam ullam incidunt explicabo vero quasi cupiditate, 
+                        quae ut impedit unde repellat odit, aperiam corrupti error cum!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" max-w-2xl mx-auto ">
+        <div class="border-b-2">
+            <div class="accordion-header flex items-center justify-between">
+                <span class="font-semibold text-lg">Qui nous sommes?</span>
+                <i class="bx bx-chevron-down"></i>
+            </div>
+
+            <div class="accordion-body">
+                <div class="p-4 ">
+                    <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Quaerat inventore molestiae magni 
+                        voluptatem veniam ullam incidunt explicabo vero quasi cupiditate, 
+                        quae ut impedit unde repellat odit, aperiam corrupti error cum!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Prendre toute les entete des accordions
+        const accordionHeader = document.querySelectorAll('.accordion-header');
+
+        //Ajouter un evenement click sur chacun
+        accordionHeader.forEach(accordionHeader=>{
+            accordionHeader.addEventListener('click', () => {
+                accordionHeader.classList.toggle('active');
+                // Trouver le contenu de chaque section d'accordion
+                const accordionBody = accordionHeader.nextElementSibling;
+                if(accordionHeader.classList.contains('active')){
+                    accordionBody.style.maxHeight = accordionBody.scrollHeight + 'px';
+                }else{
+                    accordionBody.style.maxHeight = 0;
+                }
+                
+            })
+        })
+    </script>
+</body>
+</html>
