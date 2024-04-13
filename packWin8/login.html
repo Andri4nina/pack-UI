@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/tailwind.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/win8.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Windows 8 pack UI</title>
+    
+</head>
+<body class="relative h-screen bodyWin8">
+    <div class="max-h-screen h-screen w-full relative flex justify-center items-center">
+        <div class="absolute top-5 right-5 ">
+            <div class="inputfield px-4 py-1 border-b-2">
+                <input type="text" placeholder="Lieux" class="bg-transparent outline-none text-white">  
+            </div>   
+        </div>
+        
+        <div class="absolute top-5 left-5 ">
+            <div class="bg-red-500 h-16 w-16  Logo">
+            </div>   
+        </div>
+        
+        <div class="absolute bottom-5 left-5">
+            <h4 class="text-white text-xl text-center border-b-2 mb-5">
+                Utilisateurs
+            </h4>
+            
+            <div class=" overflow-hidden   w-52 h-24">
+                <ul class="overflow-hidden hover:overflow-y-scroll h-full  scrollbar-thin  scrollbar-thumb-transparent scrollbar-track-transparent">
+                    <li class="hover:bg-slate-50 hover:bg-opacity-5 cursor-pointer text-white flex justify-around px-4 py-3 items-center rounded-md">
+                        <div>
+                            <i class="bx bx-user text-2xl"></i>
+                        </div>
+                        <div>
+                            Andrianina
+                        </div>
+                    </li>
+                   
+                
+                </ul>
+            </div>
+        
+        </div>
+        
+        
+        <div class="absolute bottom-5 right-5">
+            <button class="bg-red-600 rounded-sm p-2 h-10 w-10"><i class="text-white bx bx-power-off"></i></button>
+        </div>
+        
+        
+        <div class="w-60 text-center" >
+        <form action="">
+            <i class="bx bx-user-circle text-center text-9xl text-white"></i>
+            <div class="text-white text-center">
+                Andrianina
+            </div>
+            <div class="inputfield px-4 py-1 my-5 border-b-2">
+                <input type="password" placeholder="mot de passe" class="bg-transparent outline-none text-white">  
+            </div> 
+                <input type="hidden" name="id_user">
+                <input type="hidden" name="nom_user">
+                <input type="hidden" name="post_localisation">
+            <button class="mt-5 btn-skin2  px-4  py-2 rounded-sm text-white">
+                Se Connecter
+            </button>
+        
+        </form>
+        
+        </div>    
+    </div>
+</body>
+</html>

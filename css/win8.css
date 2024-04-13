@@ -1,0 +1,81 @@
+.bodyWin8{
+    position: relative;
+}
+
+
+:root{
+    --bg-black-900:#f2f2fc  ;
+    --bg-black-100:#fdf9ff ;
+    --bg-black-50:#e8dfec  ;
+    --text-black-900:#302e4d;
+    --text-black-700:#504e70;
+    --text-info:#7d8da1;
+    --bg-light:rgba(132,139,200,0.18);
+    --skin--color1:#4863A0;
+    --skin--color2:#0C2340;
+
+}
+
+  /* ==========================================================================
+    Theme
+  ========================================================================== */
+.jaune{
+  --skin--color1:#CDA323;
+  --skin--color2:#8B6914;
+}
+
+.rouge{
+  --skin--color1:#A61B1B;
+  --skin--color2:#5C0404;
+
+}
+
+.vert{
+  --skin--color1:#1F9B4F;
+  --skin--color2:#184E29;
+}
+
+.rose{
+  --skin--color1:#F021B2;
+  --skin--color2:#701053;
+
+}
+
+body.dark
+{
+    --bg-black-900:#151515  ;
+    --bg-black-100:#222222;
+    --bg-black-50:#393939  ;
+    --text-black-900:#FFFFFF;
+    --text-black-700:#E9E9E9;
+    --text-info:#dce1eb;
+    --bg-light:#363949;
+    transition: all ease-in-out .2s;
+    -moz-transition: all ease-in-out .2s;
+}
+
+body{
+    font-family: poppins, sans-serif;
+    background-color: var(--skin--color1);
+    color: var(--text-black-900);
+    overflow-x:hidden;
+    transition: all ease-in-out .2s;
+    -moz-transition: all ease-in-out .2s;
+}
+
+.boxbg{
+    background: linear-gradient(to bottom left,var(--skin--color1),var(--skin--color2));
+}
+
+
+.bg-skin1,.btn-skin1{
+  background-color: var(--skin--color1);
+}
+
+.bg-skin2,.btn-skin2{
+    background-color: var(--skin--color2);
+}
+
+
+
+
